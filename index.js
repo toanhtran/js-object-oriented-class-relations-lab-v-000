@@ -19,7 +19,7 @@ constructor(name) {
       return trip.passengers();
     });
   }
-}
+
 
 class Passenger {
   constructor(name) {
