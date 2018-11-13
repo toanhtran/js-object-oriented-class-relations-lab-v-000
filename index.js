@@ -26,6 +26,7 @@ constructor(name) {
       this.id = passengerId++;
       store.passenger.push(this);
     }
+    
     trips() {
       return store.trips.filter(trip => {
         return trip.passengerId == this.id;
