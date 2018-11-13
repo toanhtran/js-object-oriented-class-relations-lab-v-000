@@ -16,7 +16,7 @@ constructor(name) {
   }
   pasengers() {
     return this.trips().map(trip => {
-      return trip.passenger();
+      return trip.passengers();
     });
   }
 }
