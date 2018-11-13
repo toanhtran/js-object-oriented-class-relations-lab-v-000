@@ -12,7 +12,8 @@ constructor(name) {
   trips() {
     return store.trips.filter(trip => {
       return trip.driverId == this.id;
-    });
+    }.bind(this)
+  );
   }
   pasengers() {
     return this.trips().map(trip => {
