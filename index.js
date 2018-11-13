@@ -25,7 +25,7 @@ class Passenger {
   constructor(name){
     this.name = name;
     this.id = passengerId++;
-    store.passengers.push(this);
+    store.passenger.push(this);
   }
   trips() {
     return store.trips.filter(trip => {
