@@ -15,11 +15,11 @@ constructor(name) {
     });
   }
   passengers() {
-    return this.trips().map(trip => {
-      return trip.passenger();
-    });
-  }
-
+     return this.trips().map(trip => {
+       return trip.passenger();
+     });
+   }
+ }
   class Passenger {
     constructor(name) {
       this.name = name;
