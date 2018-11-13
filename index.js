@@ -11,4 +11,33 @@ class Driver {
     this.id = driverId++;
     store.drivers.push(this);
   }
+  trips() {
+    return store.trips.filter(trip => {
+      return trip.driverId == this.id;
+    });
+  }
+  passengers() {
+    return this.trips().map(trip => {
+      return trip.passenger();
+    });
+  }
+
+  class Passenger {
+    constructor(name) {
+      this.name = name;
+      this.id = passengerId++;
+      store.passenger.push(this);
+    }
+    trips() {
+      return store.trips.filter(trip => {
+        return trip.passengerId == this.id;
+      });
+    }
+    drivers(){
+      return.this.trips().map(trip => {
+        return trip.drivers();
+      });
+    }
+  }
 }
+
